@@ -741,18 +741,20 @@ nav.desktop-nav .has-dropdown:focus-within .dropdown-panel{
 
 /* ================= VIAJES (sensorial) ================= */
 .viaje-hero{
-  position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;
+  position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;
+  aspect-ratio:4/5;
 }
-.viaje-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;}
+.viaje-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;}
 .viaje-hero::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg, rgba(30,38,22,0.35) 0%, rgba(30,38,22,0.30) 50%, rgba(24,30,17,0.88) 100%);
+  background:linear-gradient(180deg, rgba(30,38,22,0.30) 0%, rgba(30,38,22,0.22) 45%, rgba(24,30,17,0.88) 100%);
 }
-.viaje-hero .wrap{position:relative;z-index:2;padding:150px 0 70px;}
+.viaje-hero .wrap{position:relative;z-index:2;padding:150px 0 50px;}
 .viaje-hero .eyebrow{color:var(--mustard-soft);}
 .viaje-hero h1{
   color:var(--cream);font-style:italic;font-weight:500;
-  font-size:clamp(2rem,6vw,3.2rem);max-width:16ch;margin-top:14px;
+  font-size:clamp(1.8rem,6vw,3.2rem);max-width:16ch;margin-top:14px;
 }
 .viaje-hero p{color:rgba(247,242,229,0.82);margin-top:18px;max-width:44ch;font-size:1.02rem;line-height:1.7;}
 
@@ -781,8 +783,8 @@ nav.desktop-nav .has-dropdown:focus-within .dropdown-panel{
   max-width:44ch;color:var(--ink-soft);font-size:1.02rem;line-height:1.75;
 }
 
-.viaje-photo-band{width:100%;overflow:hidden;max-height:78vh;}
-.viaje-photo-band img{width:100%;height:100%;object-fit:cover;display:block;}
+.viaje-photo-band{width:100%;overflow:hidden;aspect-ratio:4/5;}
+.viaje-photo-band img{width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;}
 
 /* ================= SESIONES 1:1 ================= */
 .sesiones-hero{padding:150px 0 0;}
@@ -839,4 +841,10 @@ nav.desktop-nav .has-dropdown:focus-within .dropdown-panel{
   .t-card{width:340px;}
 
   .viaje-experience .wrap{max-width:640px;}
+
+  .viaje-hero{aspect-ratio:5/4;max-height:760px;width:100%;}
+  .viaje-hero img{object-position:center 68%;}
+  .viaje-hero .wrap{padding:170px 0 60px;}
+  .viaje-photo-band{aspect-ratio:5/4;max-height:640px;width:100%;}
+  .viaje-photo-band img{object-position:center 68%;}
 }
